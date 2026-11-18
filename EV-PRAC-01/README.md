@@ -32,4 +32,3 @@ Para compilar el documento de forma local desde la terminal, asegúrate de estar
 ```bash
 cd EV-PRAC-01
 pdflatex main.tex
-pdflatex main.tex  # Segunda pasada para consolidar tablas, referencias y anchos de columna
