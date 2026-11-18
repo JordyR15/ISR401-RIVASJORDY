@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{amsmath}
+
+\geometry{letterpaper, margin=2.5cm}
+
+\begin{document}
+
+Nombre: Rivas Bodero Jordy \\
+EV-PRAC-01-SUM-Procesos y el Framework de IR. Resolver el problema
+
+\section*{D1. Comprensión Conceptual}
+\textbf{T1.} Requisitos, docuementos StRS/SyRS/SRS, y actividades del progreso. \\
+- Un requisito es una necesidad, capacidad o condición que debe cumplir un sistema, producto o servicio para satisfacer una necesidad de un necesitado /interesado, cumplir un objetivo o ajustarse a una condición establecida.
+
+\subsection*{b. Diferencias entre StRS, SyRS y SRS}
+\begin{center}
+\begin{tabular}{|p{2cm}|p{4cm}|p{1.5cm}|p{5cm}|}
+\hline
+\textbf{Documento} & \textbf{¿Qué describe?} & \textbf{Ejemplo} & \textbf{Justificación} \\ \hline
+StRS & Necesidades y expectativas de los interesados. & $E_1$ & La coordinadora necesita recibir alertas inmediatas. \\ \hline
+SyRS & Requisitos del sistema completo incluyendo sus componentes e interacciones. & $E_6$ & Establece que el sistema debe continuar registrando temperaturas durante cortes electricos\\ \hline
+SRS & Requisitos específicos del software y sus funcionalidades. & $E_5$ & Establece que el software genera informes mensuales en PDF. \\ \hline
+\end{tabular}
+\end{center}
+
+Diferencias que debe recordar:
+\begin{itemize}
+    \item StRS = Qué necesitan los interesados.
+    \item SyRS = Qué debe cumplir el sistema completo.
+    \item SRS = Qué debe cumplir el software.
+\end{itemize}
+
+\subsection*{c. Actividades del proceso}
+\begin{center}
+\begin{tabular}{|p{1cm}|p{3.5cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{ID} & \textbf{Actividad de IR} & \textbf{Tipo} & \textbf{Justificación} \\ \hline
+$H_1$ & Elicitación & Central & Se realizan entrevistas para obtener las necesidades de los interesados. \\ \hline
+$H_2$ & Análisis y negociación & Central & Se comparan las propuestas y correos y se llega a un acuerdo. \\ \hline
+$H_3$ & Especificación & Central & Se documentan los requisitos acordados con identificadores unicos. \\ \hline
+$H_4$ & Validación & Central & Los interesados revisan el documento y detectan requisitos incompletos. \\ \hline
+$H_5$ & Gestión & Transversal & Se controla un cambios, se analizan impactos y se publica una nueva versión. \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{D2. Aplicación y análisis}
+\textbf{T2. (a)} Clasificación de requisito.
+\begin{center}
+\begin{tabular}{|p{1cm}|p{2cm}|p{2cm}|p{5.5cm}|}
+\hline
+\textbf{ID} & \textbf{Tipo} & \textbf{Documento} & \textbf{Justificación} \\ \hline
+$E_1$ & Funcional & StRS & Expresa la necesidad de recibir alertas ante excursiones términicas \\ \hline
+$E_2$ & Dominio & SyRS & Establece el rango que se deben conservar las vacunas \\ \hline
+$E_3$ & Restricción & SyRS & Establece el protocolo a seguir y la frecuencia \\ \hline
+$E_4$ & Restricción del proyecto & Plan de proyecto & Fija una fecha límite \\ \hline
+$E_5$ & Funcional & SRS & Genera informes en PDF \\ \hline
+$E_6$ & No Funcional & SyRS & La continuidad durante los cortes de luz \\ \hline
+$E_7$ & No es un requisito del producto & Contexto del sistema actual & Registro manual de temperatura(descripción) \\ \hline
+$E_8$ & No Funcional & SRS & Tiempo de respuesta con 50 usuarios.\\ \hline
+$E_9$ & Restricción & SyRS & Limita el entorno del Sistema operativo \\ \hline
+$E_{10}$ & Funcional & SRS & Registro de permisos a gente autorizada \\ \hline
+$E_{11}$ & No Funcional & SRS & Impone una condición medible \\ \hline
+$E_{12}$ & Requisito del proyecto & Plan de proyecto & Define como se establecen los objetivos. \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{(b) Autoría de 6 requisitos}
+\begin{center}
+\begin{tabular}{|p{1cm}|p{6cm}|p{4cm}|}
+\hline
+\textbf{ID} & \textbf{Termino o construcción de la problemática}&\textbf{Características} \\ \hline
+$B_1$ & Fácil de usar y rápido  & No ambiguo y verificable \\ \hline
+$B_2$ & Alertas oportunas y temperatura inadecuada  & No ambiguo y verificable  \\ \hline
+$B_3$ & Sin conexión.  & Factible y verificable \\ \hline
+$B_4$ & Alojamiento y gestor de datos  & Apropiado \\ \hline
+$B_5$ & Exportar (Excel, cs, etc)  & No ambiguo y verificable \\ \hline
+$B_6$ & Ninguno  & Cumple las caracteristicas \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{D3. Síntesis y producción}
+\textbf{T3.} Redacción de seis requisitos Bien Formados.
+\begin{center}
+\begin{tabular}{|p{1cm}|p{10cm}|}
+\hline
+\textbf{ID} & \textbf{Requisito} \\ \hline
+$B_1$ & Cuando existan 50 usuarios conectados simultáneamente, el sistema debera mostrar el historial de temperaturade un establecimiento en menos de 3 segundos. \\ \hline
+$B_2$ & Cuando la temperatura esté fuera de los rangos establecidos se enviaran notificaciones al responsable del establecimiento en un plazo de 5 minutos. \\ \hline
+$B_3$ & El sistema debe recibir y almacenar las lecturas de temperatura registradas por los sensores dentro del tiempo establecidos \\ \hline
+$B_5$ & Cuando el sistema reciba una solicitud de importar datos este tendra establecido el formato al cual se solicite se proporcionara el respectivo archivo. \\ \hline
+$B_6$ & El sistema enviara notificaciones al responsable en caso de que existan anomalías en la temperatura. \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{D4. Uso de estándares y referencias}
+\textbf{T4.} y las justificaciones de $T_1$ a $T_3$
+\begin{center}
+\begin{tabular}{|p{2cm}|p{5cm}|p{3cm}|}
+\hline
+Específico & Define que debe hacer el sistema, sin ambiguedades & No ambiguo \\ \hline
+Medible & Permite medir el objetivo & Verificable \\ \hline
+Alcanzable & Al alcance de los involucrados & Factible \\ \hline
+Realizable & Dentro de las capacidades & Factible \\ \hline
+Trazable & Va en contexto con lo solicitado & Identificable \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{Defectos}
+\begin{itemize}
+    \item No existe completitud en el conjunto
+    \item Inconsistencia entre los requisitos
+    \item Conflicto en la continuidad del requisito
+    \item Diferencia entre la lectura inmediata y periódica
+    \item Exportación de datos sin definir alcance
+    \item Falta de uniformidad entre las alertas
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|p{1cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Categorización} & \textbf{ID} & \textbf{Defecto} & \textbf{Corrección} \\ \hline
+Consistencia & $E_6, B_3$ & $E_6$ establece continuidad durante cortes de hasta 8 horas; $B_3$ exige registro indefinido incluso sin conexión. & Definir límite de autonomía y comportamiento ante la pérdida de energía. \\ \hline
+Completitud & $E_2, B_6$ & $E_2$ define el rango de $+2^{\circ}\text{C}$ a $+8^{\circ}\text{C}$, pero $B_6$ establece alertas cuando se supera $+8^{\circ}\text{C}$. & Añadir la condición de alerta cuando la temperatura sea inferior a $+2^{\circ}\text{C}$. \\ \hline
+\end{tabular}
+\end{center}
+
+\end{document}
